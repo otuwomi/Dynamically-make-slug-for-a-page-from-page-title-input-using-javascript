@@ -1,0 +1,14 @@
+<input type="text" name="product_name" id="product_name" class="form-control" required>
+<input type="hidden" name="product_slug" id="product_slug" class="form-control" required>
+                                
+                                
+<script>
+	//adding product quantity on cart page
+	$(function () {
+		$('#product_name').keyup(function () {
+			var value = $(this).val().toLowerCase();
+			$('#product_slug').val(value.split(' ').join('-'));
+		}).keyup();
+	});
+
+</script>
